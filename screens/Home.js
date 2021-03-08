@@ -39,6 +39,11 @@ const Home = () => {
 			setSearchedCities([...searchedCities, city]);
 
 			setLoading(false);
+
+			const latitude = city.geometry.lat;
+			const longitude = city.geometry.lng;
+
+			navigation.navigate("Details", { latitude, longitude });
 		} catch (error) {
 			console.log(error);
 			setLoading(false);
