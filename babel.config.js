@@ -1,3 +1,4 @@
+//prettier-ignore
 module.exports = function(api) {
   api.cache(true);
   return {
